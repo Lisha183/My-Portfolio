@@ -1,60 +1,259 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Experience</title>
-    <style>
-      p{
-        color: rgb(213, 187, 34);
-        font-size: x-large;
-      }
-     
-      body{
-        background-image: url(q.jpg);
-        background-size:cover ;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alicia Chege | Experience & Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --primary-dark-blue: #2c3e50;
+      --secondary-gray: #f2f2f2;
+      --accent-mustard: #E0B95B;
+      --text-light-gray: #666;
+      --text-dark: #333;
+      --card-bg: #fff;
+      --soft-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
 
-      }
-    
-        .navbars{
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          color: black;
-          border: 10px;
-          background-color: rgb(77, 103, 77);
-        
-         
-        
-      }
-      .link{
-         list-style: none;
-         display: flex;
-          gap: 100px;
-        
-      }
-      .link a{
-          text-decoration: none;
-          color: white;
-          font-size: 20px;
-      }
-    </style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--secondary-gray);
+      color: var(--text-dark);
+    }
+
+    .navbar-container {
+      width: 100%;
+      background-color: var(--primary-dark-blue);
+      padding: 0.8rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      background-color: #fff;
+      color: var(--accent-mustard);
+      border: 1px solid var(--accent-mustard);
+    }
+ 
+
+
+    .page-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      background-color: var(--card-bg);
+      padding: 3rem 2rem;
+      border-radius: 10px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--accent-mustard);
+      border-radius: 2px;
+    }
+
+    .experience-item {
+      margin-bottom: 3rem;
+    }
+
+    .experience-item h3 {
+      font-size: 1.4rem;
+      color: var(--primary-dark-blue);
+    }
+
+    .experience-item h4 {
+      font-size: 1.1rem;
+      color: var(--accent-mustard);
+      margin-bottom: 0.5rem;
+    }
+
+    .experience-item p, .experience-item ul {
+      color: var(--text-light-gray);
+      line-height: 1.6;
+    }
+
+    .experience-item ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background-color: var(--secondary-gray);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: var(--soft-shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card h3 {
+      color: var(--primary-dark-blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: var(--text-light-gray);
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 0.8rem;
+      color: var(--accent-mustard);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .project-card a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbars">
-      
-    <ul class="link">
-        <li><a href="index.html">Home</a></li> <br>
-        <li><a href="about.html">About</a></li> <br>
-        <li><a href="education.html">Education</a></li> <br>
-        <li><a href="experience.html">Experience</a></li> <br>
-        <li><a href="interests.html">Interests</a></li><br>
-    </ul>
-  </nav>>
-
-     <h1 style="font-family: papyrus; color: rgb(222, 191, 15); "> My Experience</h1>
-     <p>I have graduated from ALX A.I Career Essentials</p>
-      <img src="ALX.jpeg" alt="ALX A.I Career Essentials">
-     <p>I have ushered in global the digital health forum </p>
-       <img src ="global.jpeg" alt="Health Forum">
+  <div class="navbar-container">
+    <nav class="navbar">
        
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT ME</a>
+      <a href="education.html">EDUCATION</a>
+      <a href="experience.html" class="active">EXPERIENCE</a>
+      <a href="interests.html" >INTERESTS</a>
 
+    </nav>
+  </div>
+
+  <div class="page-container">
+    <h2 class="section-title">MY EXPERIENCE</h2>
+
+    <div class="experience-item">
+      <h3>Zindua School</h3>
+      <h4>Software Engineering Student (Feb 2025 – Present)</h4>
+      <p>I am currently enrolled in an intensive software engineering program focused on full-stack web development. I have gained hands-on experience with Django, React, and PostgreSQL, just to mention a few .</p>
+      <ul>
+        <li>Built and deployed full-stack applications using REST APIs and JWT authentication.</li>
+        <li>Collaborated in agile project workflows and Git version control.</li>
+        <li>Explored backend logic, state management, and frontend UI design.</li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <h3>ALX Africa</h3>
+      <h4>AI Career Essentials Graduate (Oct – Nov 2024)</h4>
+      <p>Completed the ALX Career Essentials program, which focused on essential workplace and technical skills. Gained practical experience in prompt engineering, effective communication, and ethical use of AI.
+</p>
+    </div>
+
+    <h2 class="section-title">PROJECTS</h2>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>HR Management System</h3>
+        <p>A complete HR web app that includes employee profiles, leave tracking, payroll, and performance reviews. Built using Django REST Framework and React.</p>
+        <a href="https://hr-frontend-us1v.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i> View Live</a>
+      </div>
+
+      <div class="project-card">
+  <h3>Library Website</h3>
+  <p>A responsive library system built with HTML and CSS. Features a clean layout, intuitive navigation, and styled components suitable for educational institutions.</p>
+  <a href="https://lisha183.github.io/Library-Website/" target="_blank">
+    <i class="fas fa-external-link-alt"></i> View Live
+  </a>
+</div>
+
+<div class="project-card">
+  <h3>React Quiz App</h3>
+  <p>An interactive quiz application built using React. Features dynamic question rendering, scoring, and real-time feedback for users.</p>
+  <a href="https://my-quiz-app-zqk9.vercel.app/" target="_blank">
+    <i class="fas fa-external-link-alt"></i> View Live
+  </a>
+</div>
+
+
+
+ <div class="project-card">
+  <h3>Movie Review Website</h3>
+  <p>A static website showcasing movie reviews. Built using HTML and CSS with a focus on layout structure, visual hierarchy, and user-friendly design.</p>
+  <a href="https://lisha183.github.io/Movie-Review-Website/" target="_blank">
+    <i class="fas fa-external-link-alt"></i> View Live
+  </a>
+</div>
+
+<div class="project-card">
+  <h3>Multi-Step Wizard Form</h3>
+  <p>A responsive, multi-step form built using React. Handles form validation, step navigation, and user input state management across stages.</p>
+  <a href="https://my-wizard-form.vercel.app/" target="_blank">
+    <i class="fas fa-external-link-alt"></i> View Live
+  </a>
+</div>
+
+<div class="project-card">
+  <h3>React To-Do App</h3>
+  <p>A clean and functional task management app built using React. Features include task creation, completion toggling, and deletion with local storage support.</p>
+  <a href="https://my-todo-app-liart-psi.vercel.app/" target="_blank">
+    <i class="fas fa-external-link-alt"></i> View Live
+  </a>
+</div>
+    </div>
+  </div>
 </body>
 </html>

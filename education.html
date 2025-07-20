@@ -1,63 +1,195 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-     <title>Education</title>
-    <style>
-        h1{
-            color: black;
-            text-align: center;
-            font-family: fantasy;
-            font-size: 60px;
-        }
-        p{
-            text-align: left;
-            font-family: fantasy;
-            font-size: 20px;
-        }
-        body{
-            background-color: white;
-            background-image: url(2.jpeg);
-            background-size: cover;
-        }
-        .navbars{
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          color: black;
-          border: 10px;
-          background-color: rgb(105, 158, 105);
-        
-         
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alicia Chege | Education</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <style>
+    :root {
+      --primary-dark-blue: #2c3e50;
+      --secondary-gray: #f2f2f2;
+      --accent-mustard: #d4af37;
+      --text-light-gray: #666;
+      --text-dark: #333;
+      --card-bg: #fff;
+      --soft-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     }
-      .link{
-         list-style: none;
-         display: flex;
-          gap: 100px;
-        
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--secondary-gray);
+      color: var(--text-dark);
+    }
+
+    .navbar-container {
+      width: 100%;
+      background-color: var(--primary-dark-blue);
+      padding: 0.8rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      background-color: #fff;
+      color: var(--accent-mustard);
+      border: 1px solid var(--accent-mustard);
+    }
+
+    .page-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2.5rem 4rem;
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--primary-dark-blue);
+      text-align: center;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 80px;
+      height: 3px;
+      background-color: var(--accent-mustard);
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .education-item {
+      background-color: var(--secondary-gray);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+    .education-item img.education-logo {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow);
+}
+
+    .education-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .education-item h3 {
+      color: var(--primary-dark-blue);
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .education-item p {
+      color: var(--text-light-gray);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .page-container {
+        padding: 1.5rem 2rem;
       }
-      .link a{
-          text-decoration: none;
-          color: white;
-          font-size: 20px;
+      .section-title {
+        font-size: 2rem;
       }
-    </style>
+    }
+
+    @media (max-width: 480px) {
+      .navbar {
+        flex-direction: column;
+        align-items: center;
+      }
+      .navbar a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav class="navbars">
+
+  <div class="navbar-container">
+    <nav class="navbar">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT ME</a>
+      <a href="education.html" class="active">EDUCATION</a>
+      <a href="experience.html">MY EXPERIENCE</a>
+      <a href="interests.html">INTERESTS</a>
+
       
-    <ul class="link">
-        <li><a href="index.html">Home</a></li> <br>
-        <li><a href="about.html">About</a></li> <br>
-        <li><a href="education.html">Education</a></li> <br>
-        <li><a href="experience.html">Experience</a></li> <br>
-        <li><a href="interests.html">Interests</a></li><br>
-    </ul>
-</nav>
-    <h1>My Education</h1>
-    <p>I'm a student at Zindua School, studying Software Engineering.</p><br>
-    <img src ="Zindua.png" alt ="Zindua School">
-    <p style="position: right;">I also completed an A.I course from ALX.</p>
-    <img src ="ALX.jpeg" alt ="ALX">
-    
+    </nav>
+  </div>
+
+  <div class="page-container">
+    <h2 class="section-title">EDUCATION</h2>
+    <div class="education-grid">
+      <div class="education-item">
+        <h3>Zindua School | 2024 – Present</h3>
+          <img src="Zindua.png" alt="Zindua Logo" class="education-logo" />
+        <p>Software Engineering Bootcamp focusing on full-stack development (Python, Django, React, REST APIs).</p>
+      </div>
+
+<div class="education-item">
+  <h3>ALX Africa | 2023</h3>
+  <img src="Image.jpeg" alt="ALX Africa Logo" class="education-logo" />
+  <p>Completed the Career Essentials program, focusing on foundational tech skills, Python scripting, prompt engineering, and professional development.</p>
+</div>
+
+
+      <div class="education-item">
+        <h3>High School | 2019-2023 </h3>
+          <img src="Image.jpeg" alt="ALX Africa Logo" class="education-logo" />
+        <p>Attended Moi Girls' High School, Nairobi and completed my highschool from Rafiki Foundation.</p>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
